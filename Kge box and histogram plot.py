@@ -3,7 +3,7 @@ import seaborn as sns
 import pandas as pd
 import matplotlib.gridspec as gridspec
 
-df_m = pd.read_csv('/Users/yubinbaaniya/Library/CloudStorage/Box-Box/master thesis and what not/Thesis/Analysis files/THAGI saber and jorge.csv')
+df_m = pd.read_csv('/Users/yubinbaaniya/Library/CloudStorage/Box-Box/master thesis and what not/Thesis/Analysis files/saber and jorge.csv')
 # Rename columns
 df_m.rename(columns={'kge_2012_QM': 'KGE QM', 'kge_sim': 'KGE Sim', 'kge_SFDC': 'KGE SABER'}, inplace=True)
 
