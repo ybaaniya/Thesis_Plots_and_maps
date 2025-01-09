@@ -4,7 +4,7 @@ import pandas as pd
 import matplotlib.gridspec as gridspec
 
 df_m = pd.read_csv('/Users/yubinbaaniya/Library/CloudStorage/Box-Box/master thesis and what not/Thesis/Analysis files/THAGI saber and jorge.csv')
-# Rename columns to make them user-friendly in the plot
+# Rename columns
 df_m.rename(columns={'kge_2012_QM': 'KGE QM', 'kge_sim': 'KGE Sim', 'kge_SFDC': 'KGE SABER'}, inplace=True)
 
 # Define colors for each metric
@@ -41,7 +41,7 @@ for idx, col in enumerate(['KGE Sim', 'KGE SABER', 'KGE QM']):
     ax_box = fig.add_subplot(grid[0])
     sns.boxplot(x=clipped_data, ax=ax_box, showfliers=True, color=colors[col])
     ax_box.set(yticks=[], xlabel=None)
-    ax_box.set_xlim(-5, 1.05)  # Set x-axis limits to show down to -5
+    ax_box.set_xlim(-5, 1.05)
 
     # Histogram below with specified color
     ax_hist = fig.add_subplot(grid[1], sharex=ax_box)
